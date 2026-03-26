@@ -51,7 +51,7 @@ export default function Dashboard() {
 
         {/* Quick Actions */}
         <div className="flex gap-3 overflow-x-auto pb-2 md:pb-0 hide-scrollbar">
-          <Link href="/transfer" className="flex flex-col items-center gap-2 flex-shrink-0 group">
+          <Link href="/app/transfer" className="flex flex-col items-center gap-2 flex-shrink-0 group">
             <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300 shadow-lg">
               <Send className="w-6 h-6" />
             </div>
@@ -146,7 +146,7 @@ export default function Dashboard() {
         <div className="glass-panel rounded-3xl p-6 flex flex-col h-full">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-xl font-display font-medium">Recent</h2>
-            <Link href="/transactions" className="text-sm text-primary hover:text-primary/80 font-medium transition-colors">
+            <Link href="/app/transactions" className="text-sm text-primary hover:text-primary/80 font-medium transition-colors">
               View All
             </Link>
           </div>

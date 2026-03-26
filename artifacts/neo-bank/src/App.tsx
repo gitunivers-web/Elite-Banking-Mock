@@ -4,7 +4,11 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AppLayout } from "@/components/layout/AppLayout";
 
-// Pages
+// Public pages
+import Landing from "@/pages/landing";
+import Login from "@/pages/login";
+
+// App pages
 import Dashboard from "@/pages/dashboard";
 import Transactions from "@/pages/transactions";
 import Transfer from "@/pages/transfer";
@@ -17,24 +21,52 @@ const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       refetchOnWindowFocus: false,
-      staleTime: 1000 * 60 * 5, // 5 minutes
+      staleTime: 1000 * 60 * 5,
     },
   },
 });
 
 function Router() {
   return (
-    <AppLayout>
-      <Switch>
-        <Route path="/" component={Dashboard} />
-        <Route path="/transactions" component={Transactions} />
-        <Route path="/transfer" component={Transfer} />
-        <Route path="/savings" component={Savings} />
-        <Route path="/cards" component={Cards} />
-        <Route path="/profile" component={Profile} />
-        <Route component={NotFound} />
-      </Switch>
-    </AppLayout>
+    <Switch>
+      {/* Public routes — no sidebar layout */}
+      <Route path="/" component={Landing} />
+      <Route path="/login" component={Login} />
+
+      {/* Authenticated app routes — with sidebar */}
+      <Route path="/app">
+        <AppLayout>
+          <Dashboard />
+        </AppLayout>
+      </Route>
+      <Route path="/app/transactions">
+        <AppLayout>
+          <Transactions />
+        </AppLayout>
+      </Route>
+      <Route path="/app/transfer">
+        <AppLayout>
+          <Transfer />
+        </AppLayout>
+      </Route>
+      <Route path="/app/savings">
+        <AppLayout>
+          <Savings />
+        </AppLayout>
+      </Route>
+      <Route path="/app/cards">
+        <AppLayout>
+          <Cards />
+        </AppLayout>
+      </Route>
+      <Route path="/app/profile">
+        <AppLayout>
+          <Profile />
+        </AppLayout>
+      </Route>
+
+      <Route component={NotFound} />
+    </Switch>
   );
 }
 
