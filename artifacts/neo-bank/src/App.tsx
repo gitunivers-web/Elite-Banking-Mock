@@ -7,6 +7,10 @@ import { AppLayout } from "@/components/layout/AppLayout";
 // Public pages
 import Landing from "@/pages/landing";
 import Login from "@/pages/login";
+import Features from "@/pages/features";
+import Pricing from "@/pages/pricing";
+import Security from "@/pages/security";
+import About from "@/pages/about";
 
 // App pages
 import Dashboard from "@/pages/dashboard";
@@ -31,6 +35,10 @@ function Router() {
     <Switch>
       {/* Public routes — no sidebar layout */}
       <Route path="/" component={Landing} />
+      <Route path="/features" component={Features} />
+      <Route path="/pricing" component={Pricing} />
+      <Route path="/security" component={Security} />
+      <Route path="/about" component={About} />
       <Route path="/login" component={Login} />
 
       {/* Authenticated app routes — with sidebar */}

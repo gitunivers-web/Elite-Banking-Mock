@@ -16,6 +16,7 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
+import { PublicNavbar, PublicFooter } from "@/components/layout/PublicLayout";
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
@@ -30,33 +31,7 @@ const stagger = {
 export default function Landing() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* ─── Navbar ─── */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="font-bold text-primary-foreground text-sm">N</span>
-            </div>
-            <span className="font-bold text-xl tracking-tight">NeoBank</span>
-          </div>
-
-          <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-            <a href="#features" className="hover:text-foreground transition-colors">Fonctionnalités</a>
-            <a href="#how" className="hover:text-foreground transition-colors">Comment ça marche</a>
-            <a href="#pricing" className="hover:text-foreground transition-colors">Tarifs</a>
-            <a href="#testimonials" className="hover:text-foreground transition-colors">Avis clients</a>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <Link href="/login" className="text-sm text-muted-foreground hover:text-foreground transition-colors px-4 py-2">
-              Se connecter
-            </Link>
-            <Link href="/login" className="text-sm bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity">
-              Ouvrir un compte
-            </Link>
-          </div>
-        </div>
-      </header>
+      <PublicNavbar />
 
       {/* ─── Hero ─── */}
       <section className="pt-32 pb-24 px-6 relative overflow-hidden">
@@ -442,40 +417,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* ─── Footer ─── */}
-      <footer className="border-t border-white/5 py-12 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between gap-8 mb-10">
-            <div className="max-w-xs">
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-7 h-7 rounded-lg bg-primary flex items-center justify-center">
-                  <span className="font-bold text-primary-foreground text-xs">N</span>
-                </div>
-                <span className="font-bold tracking-tight">NeoBank</span>
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">La banque en ligne haut de gamme qui simplifie votre vie financière.</p>
-            </div>
-            <div className="grid grid-cols-3 gap-8 text-sm">
-              {[
-                { title: "Produit", links: ["Fonctionnalités", "Tarifs", "Sécurité", "Application mobile"] },
-                { title: "Entreprise", links: ["À propos", "Blog", "Presse", "Carrières"] },
-                { title: "Support", links: ["Centre d'aide", "Contact", "Conditions", "Confidentialité"] },
-              ].map((col) => (
-                <div key={col.title}>
-                  <div className="font-medium mb-3">{col.title}</div>
-                  <ul className="space-y-2">
-                    {col.links.map((l) => <li key={l}><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">{l}</a></li>)}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-muted-foreground">
-            <span>© 2024 NeoBank. Tous droits réservés.</span>
-            <span>Agréé par l'ACPR • Dépôts garantis jusqu'à 100 000€ par le FGDR</span>
-          </div>
-        </div>
-      </footer>
+      <PublicFooter />
     </div>
   );
 }
