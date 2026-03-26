@@ -8,6 +8,7 @@ export function PublicNavbar() {
 
   const links = [
     { href: "/features", label: "Fonctionnalités" },
+    { href: "/prets", label: "Prêts" },
     { href: "/security", label: "Sécurité" },
     { href: "/pricing", label: "Tarifs" },
     { href: "/about", label: "À propos" },
@@ -85,6 +86,7 @@ export function PublicFooter() {
               <div className="font-medium mb-3">Produit</div>
               <ul className="space-y-2">
                 <li><Link href="/features" className="text-muted-foreground hover:text-foreground transition-colors">Fonctionnalités</Link></li>
+                <li><Link href="/prets" className="text-muted-foreground hover:text-foreground transition-colors">Prêts & Crédits</Link></li>
                 <li><Link href="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">Tarifs</Link></li>
                 <li><Link href="/security" className="text-muted-foreground hover:text-foreground transition-colors">Sécurité</Link></li>
                 <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Application mobile</a></li>

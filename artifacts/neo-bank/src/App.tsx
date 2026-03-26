@@ -11,6 +11,7 @@ import Features from "@/pages/features";
 import Pricing from "@/pages/pricing";
 import Security from "@/pages/security";
 import About from "@/pages/about";
+import Loans from "@/pages/loans";
 
 // App pages
 import Dashboard from "@/pages/dashboard";
@@ -39,6 +40,7 @@ function Router() {
       <Route path="/pricing" component={Pricing} />
       <Route path="/security" component={Security} />
       <Route path="/about" component={About} />
+      <Route path="/prets" component={Loans} />
       <Route path="/login" component={Login} />
 
       {/* Authenticated app routes — with sidebar */}
