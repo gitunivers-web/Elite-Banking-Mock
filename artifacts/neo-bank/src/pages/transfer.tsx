@@ -207,8 +207,8 @@ export default function Transfer() {
               </p>
             </div>
             <div className="pt-8">
-              <Link href="/" className="px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors font-medium inline-block">
-                Back to Dashboard
+              <Link href="/app" className="px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors font-medium inline-block">
+                Retour au Dashboard
               </Link>
             </div>
           </div>

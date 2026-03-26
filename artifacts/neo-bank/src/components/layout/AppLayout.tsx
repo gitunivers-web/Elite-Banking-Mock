@@ -14,7 +14,7 @@ const navItems = [
 ];
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
-  const [location, navigate] = useLocation();
+  const [location] = useLocation();
 
   return (
     <div className="flex h-screen bg-background text-foreground overflow-hidden selection:bg-primary/30">
@@ -64,13 +64,13 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         </nav>
 
         <div className="p-4 border-t border-border mt-auto">
-          <button
-            onClick={() => navigate("/")}
+          <Link
+            href="/"
             className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-all w-full"
           >
             <LogOut className="w-5 h-5" />
             <span>Déconnexion</span>
-          </button>
+          </Link>
         </div>
       </aside>
 

@@ -1,6 +1,8 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { user, transactions, chartData, savingsPots, contacts, type Transaction, type SavingsPot } from "@/lib/mock-data";
 
+const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
 export function useUser() {
   return useQuery({
     queryKey: ['user'],
