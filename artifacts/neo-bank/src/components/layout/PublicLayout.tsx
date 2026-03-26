@@ -1,6 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { LanguageSelector } from "@/components/LanguageSelector";
 
 export function PublicNavbar() {
   const [location] = useLocation();
@@ -37,6 +38,7 @@ export function PublicNavbar() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
+          <LanguageSelector />
           <Link href="/login" className="text-sm text-muted-foreground hover:text-foreground transition-colors px-4 py-2">
             Se connecter
           </Link>
