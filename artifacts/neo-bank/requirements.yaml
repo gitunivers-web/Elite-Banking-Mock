@@ -1,0 +1,15 @@
+packages:
+  "recharts": "For the spending chart on the dashboard"
+  "framer-motion": "For premium page transitions and micro-interactions"
+  "date-fns": "For formatting transaction dates"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility for merging tailwind classes without style conflicts"
+
+images:
+  - path: "artifacts/neo-bank/public/images/card-bg.png"
+    description: "Abstract, elegant, dark, smooth fluid gradient mesh in deep obsidian, subtle metallic silver, and electric blue hints. Suitable for a premium credit card background."
+    aspect_ratio: "16:9"
+
+notes:
+  - No backend is required, all data is mocked in the frontend to demonstrate UI/UX.
+  - App relies heavily on a dark mode premium aesthetic with glassmorphism.
